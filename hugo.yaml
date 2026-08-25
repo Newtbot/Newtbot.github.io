@@ -1,0 +1,92 @@
+baseURL: ""
+locale: en-us
+title: Noots Blog
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 3
+
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 1
+        - name: Search
+          url: search/
+          weight: 2
+        - name: Tags
+          url: tags/
+          weight: 3
+
+params:
+
+  homeInfoParams:
+      Title: "Introduction.."
+      Content: |
+        Hi im Noot or Ti Seng.. 
+        This Blog post is for me to yap and post about my journey in tech. This website will contains random writeup that i decided i have motivation to write for both 
+        my Homelab and my School Project or CTF. 
+
+        Currently Learning thingz.
+        - OpenTofu (Terraform OSS)
+        - Ansible Playbook 
+        - n8n (Self Hosted automation)
+        - idk
+
+        Hobbies Outside of Work:
+        - Running
+        - Hiking
+        - Cycling 
+        - Reading
+      
+        Feel Free to contact me at limtiseng@gmail.com
+
+  socialIcons:
+      - name: github
+        title: My Github
+        url: "https://github.com/Newtbot"
+      - name: Linkedin
+        title: My Linkedin
+        url: "www.linkedin.com/in/lim-tiseng"
+
+    # env: 
+    # production:
+  contact:
+      email: limtiseng@gmail.com
+      phone: +65 84178596
+      subtitle: idk
+      ShowReadingTime: true
+      ShowCodeCopyButtons: true
+      defaultTheme: auto
+      ShowRssButtonInSectionTermList: true
+      ShowFullTextinRSS: true
+      ShowWordCount: true
+      cover.linkFullImages: true
+      ShowBreadCrumbs: true
+      ShowShareButtons: true
+      ShowPostNavLinks: true
+      ShowAllPagesInArchive: true
+      ShowPageNums: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  x:
+    disableInlineCSS: true
+
+
+
+# label.iconHeight: 25
+
