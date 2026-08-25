@@ -1,5 +1,6 @@
 baseURL: ""
 locale: en-us
+timeZone: "Asia/Singapore"
 title: Noots Blog
 theme: ["PaperMod"]
 
@@ -60,6 +61,9 @@ params:
       - name: Linkedin
         title: My Linkedin
         url: "www.linkedin.com/in/lim-tiseng"
+
+  mainSections:
+  - posts
 
     # env: 
     # production:

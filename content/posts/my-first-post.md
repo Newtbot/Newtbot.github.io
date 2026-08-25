@@ -1,18 +1,19 @@
 ---
-date: '2026-08-26T01:12:28+08:00'
-draft: false
-title: 'My First Post'
----
-{{< highlight html >}}
+author: "Ti Seng"
+title: "Setting Up your own Blog / Portofolio Webpage with a CMS / Hugo"
+date: "2026-08-26"
+description: "Article on Hugo and CMS."
+tags: ["markdown", "css", "html", "themes", "CMS" , "Static Site Generator"]
+categories: ["themes", "syntax"]
+series: ["Themes Guide"]
+cover:
+  image: img/hugo.png
+ShowToc: true
+TocOpen: true
+weight: 1
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
+---
+
+
+{{< youtube hjD9jTi_DQ4 >}}
+

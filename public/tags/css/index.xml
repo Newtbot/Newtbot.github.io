@@ -6,12 +6,19 @@
     <description>Recent content in Css on Noots Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="//localhost:1313/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up your own Blog / Portofolio Webpage with a CMS / Hugo</title>
+      <link>//localhost:1313/posts/my-first-post/</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <description>Article on Hugo and CMS.</description>
+    </item>
     <item>
       <title>Markdown Syntax Guide</title>
       <link>//localhost:1313/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
       <guid>//localhost:1313/posts/markdown-syntax/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
