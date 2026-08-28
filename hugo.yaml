@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "https://nootbot.github.io/"
 locale: en-us
 timeZone: "Asia/Singapore"
 title: Noots Blog
@@ -75,6 +75,7 @@ params:
   ShowPostNavLinks: true
   ShowAllPagesInArchive: true
   ShowPageNums: true
+  relativeURLs: true
   
 
 
