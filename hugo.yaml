@@ -32,7 +32,6 @@ languages:
           weight: 3
 
 params:
-
   homeInfoParams:
       Title: "Introduction.."
       Content: |
@@ -53,7 +52,6 @@ params:
         - Reading
       
         Feel Free to contact me at limtiseng@gmail.com
-
   socialIcons:
       - name: github
         title: My Github
@@ -65,32 +63,27 @@ params:
   mainSections:
   - posts
 
-    # env: 
-    # production:
-  contact:
-      email: limtiseng@gmail.com
-      phone: +65 84178596
-      subtitle: idk
-      ShowReadingTime: true
-      ShowCodeCopyButtons: true
-      defaultTheme: auto
-      ShowRssButtonInSectionTermList: true
-      ShowFullTextinRSS: true
-      ShowWordCount: true
-      cover.linkFullImages: true
-      ShowBreadCrumbs: true
-      ShowShareButtons: true
-      ShowPostNavLinks: true
-      ShowAllPagesInArchive: true
-      ShowPageNums: true
 
-services:
-  instagram:
-    disableInlineCSS: true
-  x:
-    disableInlineCSS: true
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  defaultTheme: auto
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  ShowWordCount: true
+  cover.linkFullImages: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  
+
+
+# services:
+#   instagram:
+#     disableInlineCSS: true
+#   x:
+#     disableInlineCSS: true
 
 
 
-# label.iconHeight: 25
 

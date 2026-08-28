@@ -117,7 +117,18 @@
 
 <article class="post-single">
   <header class="post-header">
-    
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">Posts</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
     <h1 class="post-title entry-hint-parent">
       Markdown Syntax Guide
     </h1>
@@ -126,7 +137,7 @@
     </div>
     <div class="post-meta">
 
-<span title='2019-03-11 00:00:00 +0800 +08'>March 11, 2019</span>&nbsp;·&nbsp;<span>Hugo Authors</span>
+<span title='2019-03-11 00:00:00 +0800 +08'>March 11, 2019</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>396 words</span>&nbsp;·&nbsp;<span>Hugo Authors</span>
 
 </div>
   </header> <details class="toc"  open>
@@ -338,6 +349,13 @@
       <li><a href="//localhost:1313/tags/html/">Html</a></li>
       <li><a href="//localhost:1313/tags/themes/">Themes</a></li>
     </ul>
+<nav class="paginav">
+  <a class="prev" href="//localhost:1313/posts/my-first-post/">
+    <span class="title">« Prev</span>
+    <span>Setting up a simple paper minecraft server</span>
+  </a>
+</nav>
+
   </footer>
 </article>
     </main>
@@ -419,6 +437,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

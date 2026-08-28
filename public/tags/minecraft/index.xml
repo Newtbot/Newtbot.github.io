@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Minecraft on Noots Blog</title>
+    <link>//localhost:1313/tags/minecraft/</link>
+    <description>Recent content in Minecraft on Noots Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/minecraft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a simple paper minecraft server</title>
+      <link>//localhost:1313/posts/my-first-post/</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <description>Configuring a simple minecraft server on a cointainer / vps with paper.jar for developmnet or simply self hosting a game server for your friends. Without using pterodactyl or crafty and just a simple lightweight container.</description>
+      <content:encoded><![CDATA[<h1 id="before-we-start">Before we start</h1>
+<p>Before we start i am going with some assumptions, you have some prior linux experience and know how to configure a simple VPS or a cointainer. For my usecase, i will be using a promox LCX on my own homelab.</p>
+<p>Refer to this Youtube video on what the hell is <a href="https://www.youtube.com/watch?v=f-kvuLoFTWQ">promox</a></p>
+<h2 id="making-the-container">Making the container</h2>
+<p>Skip this portion if you are using a VPS&hellip;</p>
+<h4 id="1-click-on-create-ct">1. Click on &ldquo;Create CT&rdquo;.</h4>
+<p><a href="/img/mc-server/promox.png"><img alt="Promox Dashboard" loading="lazy" src="/img/mc-server/promox.png"></a></p>
+<h4 id="2-lcx-creation-wizard">2. LCX creation Wizard.</h4>
+<p><a href="/img/mc-server/lcx-wizard.png"><img alt="Promox Dashboard" loading="lazy" src="/img/mc-server/lcx-wizard.png"></a></p>
+<ul>
+<li>Choose the relevant &ldquo;Node&rdquo;</li>
+<li>Your own &ldquo;ID&rdquo; of your choice</li>
+<li>hostname of your choice</li>
+<li>password / SSH keys</li>
+</ul>
+<h4 id="3-the-rest-of-the-configration-difers-from--each-promox-node-my-own-node-has-its-own-dir-attached-with-isos-and-networking-portion-do-read-up-on-how-to-configure-lcx-and-promox">3. The Rest of the configration difers from  each &ldquo;Promox Node&rdquo;. My own Node has its own Dir attached with ISOs and networking portion. (Do read up on how to configure LCX and Promox)</h4>
+<h2 id="post-cointainer-creation">Post Cointainer Creation</h2>
+<h4 id="1-lcx-container-created">1. LCX Container created.</h4>
+<p><a href="/img/mc-server/cointainer.png"><img alt="Cotanine and VMs" loading="lazy" src="/img/mc-server/container.png"></a></p>
+<h4 id="2-you-would-either-ssh-key-or-keyless-and-proceed-with-the-setup">2. You would either SSH key or keyless and proceed with the setup.</h4>
+<ul>
+<li>SSH user@&lt;hostname/Host IP&gt;</li>
+</ul>
+<h4 id="3-setting-up-the-cointaner-with-the-necessary-tools">3. Setting up the cointaner with the necessary tools.</h4>
+<ul>
+<li>If you are using a iso image usually they come lean and light&hellip; you would actually need to install your own tools like vim or vi</li>
+<li>If you have a ansible playbook to use&hellip; would be nice to use.</li>
+</ul>
+<p><strong>IMPORTANT THING TO DO:</strong>
+<strong>REMEMBER TO RUN APT-GET UPGRADE &amp; APT-GET UPGRADE -Y</strong></p>
+<h2 id="mc-server-jar-portion-jump-here-if-you-are-using-a-vps">MC server Jar Portion (Jump here if you are using a VPS)</h2>
+<h4 id="links">Links</h4>
+<ul>
+<li>The PaperMC documentation <a href="https://docs.papermc.io/paper/getting-started/">PaperMC.io</a></li>
+<li>Download Page
+(<a href="https://papermc.io/downloads/paper">https://papermc.io/downloads/paper</a>)</li>
+</ul>
+<h4 id="1-installing-the-paperjar-and-setting-up-the-mc-server">1. Installing the Paper.jar and setting up the MC server.</h4>
+<ul>
+<li>
+<p>In the Terminal run &ldquo;wget <a href="https://fill-data.papermc.io/v1/objects/a8c9140c3075bd7c04973e9cdc491b21bfe6bad472b674ef932a4ae0fec19629/paper-26.2-119.jar%22">https://fill-data.papermc.io/v1/objects/a8c9140c3075bd7c04973e9cdc491b21bfe6bad472b674ef932a4ae0fec19629/paper-26.2-119.jar"</a></p>
+</li>
+<li>
+<p>To Start the Server.</p>
+<ul>
+<li>Either Run the command where the file is &ldquo;java -Xms4G -Xmx4G -jar &lt;paper-version-name.jar&gt; &ndash;nogui&rdquo;</li>
+<li>Or with a Start-up script
+(<a href="https://docs.papermc.io/misc/tools/start-script-gen/">https://docs.papermc.io/misc/tools/start-script-gen/</a>)</li>
+</ul>
+</li>
+<li>
+<p>Startup Script Portion&hellip;</p>
+</li>
+</ul>
+<ol>
+<li>create the server.sh by running the command &ldquo;touch server.sh&rdquo;</li>
+<li>paste the script generated from (<a href="https://docs.papermc.io/misc/tools/start-script-gen/">https://docs.papermc.io/misc/tools/start-script-gen/</a>)</li>
+<li>The script should look like this..</li>
+<li>Note the location.. I chose to create a new home directory for the mc-server</li>
+<li>create a systemd file</li>
+<li>enable the systemd file and start it.</li>
+</ol>
+<p><strong>server.sh</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>root@mc-server:/home/noot# cat /home/minecraft/mc-server/server.sh
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>java -Xms1024M -Xmx1024M -jar paper-1.21.11-132.jar --nogui
+</span></span><span style="display:flex;"><span>root@mc-server:/home/noot# cat /home/minecraft/mc-server/server.sh
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>java -Xms1024M -Xmx1024M -jar paper-1.21.11-132.jar --nogui
+</span></span></code></pre></div><p><strong>systemd file</strong></p>
+<pre tabindex="0"><code>[Unit]
+Description=Minecraft Paper Server
+After=network.target
+
+[Service]
+WorkingDirectory=/home/minecraft/mc-server
+User=noot
+Group=noot
+ExecStart=/home/minecraft/mc-server/server.sh
+Restart=on-failure
+RestartSec=10
+StandardInput=null
+
+# Give it time to save the world on shutdown
+TimeoutStopSec=60
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>This is a random guide and writeup done by me and for me to remember and document what i have learned. <strong>THIS IS NOT A PERFECT WORLD GUIDE WITH BEST PRACTICE. I MADE THIS TO TEST MY MINECRAFT BOT IN MIND</strong></p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

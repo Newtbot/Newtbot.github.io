@@ -11,16 +11,13 @@
     <loc>//localhost:1313/categories/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/cms/</loc>
+    <loc>//localhost:1313/tags/container/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/css/</loc>
+    <loc>//localhost:1313/tags/linux/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/html/</loc>
-    <lastmod>2026-08-26T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/markdown/</loc>
+    <loc>//localhost:1313/tags/minecraft/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/</loc>
@@ -29,26 +26,38 @@
     <loc>//localhost:1313/posts/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/series/</loc>
+    <loc>//localhost:1313/tags/promox/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/static-site-generator/</loc>
-    <lastmod>2026-08-26T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/categories/syntax/</loc>
+    <loc>//localhost:1313/categories/system-administration--promox/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
     <lastmod>2026-08-26T00:00:00+08:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/tags/css/</loc>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/html/</loc>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/markdown/</loc>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/series/</loc>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/categories/themes/</loc>
-    <lastmod>2026-08-26T00:00:00+08:00</lastmod>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/themes/</loc>
-    <lastmod>2026-08-26T00:00:00+08:00</lastmod>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/series/themes-guide/</loc>
-    <lastmod>2026-08-26T00:00:00+08:00</lastmod>
+    <lastmod>2019-03-11T00:00:00+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/archives/</loc>
   </url><url>
